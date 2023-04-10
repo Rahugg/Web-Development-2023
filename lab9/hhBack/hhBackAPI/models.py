@@ -2,12 +2,11 @@ from django.db import models
 
 
 # Create your models here.
-
 class Company(models.Model):
     name = models.CharField(max_length=20)
-    description = models.TextField
-    city = models.CharField(max_length=20)
-    address = models.TextField
+    description = models.TextField(null=True)
+    city = models.CharField(max_length=10)
+    address = models.TextField(max_length=15, null=True)
 
     def to_json(self):
         return {
@@ -15,24 +14,21 @@ class Company(models.Model):
             'name': self.name,
             'description': self.description,
             'city': self.city,
-            'address': self.address,
+            'address': self.address
         }
 
 
 class Vacancy(models.Model):
     name = models.CharField(max_length=20)
-    salary = models.FloatField(null=True, blank=True)
     description = models.TextField()
+    salary = models.FloatField(default=0)
     company = models.ForeignKey(Company, on_delete=models.CASCADE, null=True)
 
     def to_json(self):
         return {
             'id': self.id,
             'name': self.name,
-            'salary': self.salary,
             'description': self.description,
-            'company_name': self.company.name,
-            'company_description': self.company.description,
-            'company_city': self.company.city,
-            'company_address': self.company.address,
+            'salary': self.salary,
+            'company': self.company.name
         }
