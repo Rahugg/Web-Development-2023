@@ -37,5 +37,17 @@ def vacancies_by_company(request, company_id):
 
 
 def top_ten_vacancies(request):
-    vacancies = Vacancy.objects.all().order_by('salary')[:10]
+    vacancies = Vacancy.objects.all().order_by('-salary')[:10]
     return JsonResponse([v.to_json() for v in vacancies], safe=False)
+
+
+def name_vacancy(request):
+    try:
+        name_vacan = "Python"
+        "Jun Python Dev"
+        "PyTHon"
+        vacancies = Vacancy.objects.filter(name__icontains=name_vacan).values()
+    except Vacancy.DoesNotExist as error:
+        return JsonResponse({'message: {error}'})
+
+    return JsonResponse({'vacancies': list(vacancies)}, safe=False)

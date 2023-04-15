@@ -7,7 +7,8 @@ urlpatterns = [
     path('companies/<int:company_id>/vacancies/', views.vacancies_by_company, name='vacancies_by_company'),
     path('vacancies/', views.all_vacancies, name='all_vacancies'),
     path('vacancies/<int:vacancy_id>/', views.vacancy, name='vacancy'),
-    path('vacancies/top_ten/', views.top_ten_vacancies, name='top_ten_vacancies')
+    path('vacancies/top_ten/', views.top_ten_vacancies, name='top_ten_vacancies'),
+    path('vacancies_python/', views.name_vacancy, name='name_vacancy')
 ]
 
 # /api/companies - List of all Companies
