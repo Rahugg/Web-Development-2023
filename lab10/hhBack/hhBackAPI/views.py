@@ -2,14 +2,23 @@ from django.http.response import JsonResponse
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 
 # from .models import *
 from .serializers import *
 
 
-@api_view(['GET'])
-def all_companies(request):
-    if request.method == "GET":
+# FBV - function based view
+# @api_view(['GET'])
+# def all_companies(request):
+#     if request.method == "GET":
+#         companies = Company.objects.all()
+#         serializer = CompanySerializer(companies, many=True)
+#         return Response(serializer.data)
+#
+
+class AllCompanies(APIView):
+    def get(self, request):
         companies = Company.objects.all()
         serializer = CompanySerializer(companies, many=True)
         return Response(serializer.data)
