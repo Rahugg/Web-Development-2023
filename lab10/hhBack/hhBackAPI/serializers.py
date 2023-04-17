@@ -5,6 +5,13 @@ from rest_framework import serializers
 from .models import *
 
 
+# class CompanySerializer(serializers.Serializer):
+#     id = serializers.IntegerField()
+#     name = serializers.CharField(max_length=20)
+#     description = serializers.CharField()
+#     city = serializers.CharField(max_length=10)
+#     address = serializers.CharField(max_length=15)
+
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
@@ -23,9 +30,6 @@ class VacancySerializer(serializers.Serializer):
     company = CompanySerializer()
 
     def create(self, validated_data):
-        """
-        Create and return a new `Snippet` instance, given the validated data.
-        """
         company_data = validated_data.pop('company')
         company_serializer = CompanySerializer(data=company_data)
         company_serializer.is_valid(raise_exception=True)
@@ -34,9 +38,6 @@ class VacancySerializer(serializers.Serializer):
         return vacancy_data
 
     def update(self, instance, validated_data):
-        """
-        Update and return an existing `Snippet` instance, given the validated data.
-        """
         company_data = validated_data.pop('company')
         company_serializer = CompanySerializer(instance.company, data=company_data)
         company_serializer.is_valid(raise_exception=True)
