@@ -19,4 +19,8 @@ export class CompaniesService {
   createCompany(company: { name: string, description: string, city: string, address: string }): Observable<Company[]> {
     return this.CompanyClient.post<Company[]>(`${this.BASE_URL}api/companies/`, company);
   }
+
+  deleteCompany(id:number){
+    return this.CompanyClient.delete(`${this.BASE_URL}/api/companies/${id}/`);
+  }
 }

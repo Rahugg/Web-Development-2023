@@ -8,7 +8,7 @@
   <div class="main-btns">
     <button class="change-btn"> Change</button>
     <p>Description:{{company.description}}</p>
-    <button class="delete-btn"> Delete</button>
+    <button (click)="deleteCompany(company.id)" class="delete-btn"> Delete</button>
   </div>
 </div>
 

@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac414d6-8cd7-4ac9-95ac-08874d835a96" name="Changes" comment="&quot;ADDED CRUD&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/hhBack/hhBack/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/hhBack/hhBack/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab6/album-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/album-web/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/services/companies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/services/companies.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
       <workItem from="1681561058871" duration="71000" />
       <workItem from="1681750995981" duration="3264000" />
       <workItem from="1681802154660" duration="1555000" />
-      <workItem from="1681820711711" duration="1090000" />
+      <workItem from="1681820711711" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Created models - lab9&quot;">
       <created>1681115311410</created>

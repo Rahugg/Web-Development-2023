@@ -21,4 +21,16 @@ export class CompaniesComponent implements OnInit {
     })
   }
 
+  deleteCompany(itemId: number) {
+    return this.companyService.deleteCompany(itemId).subscribe(
+      () => {
+        console.log('Item deleted successfully')
+        this.reloadPage()
+      });
+  }
+
+  reloadPage() {
+    window.location.reload()
+  }
+
 }
