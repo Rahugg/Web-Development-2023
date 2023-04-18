@@ -15,24 +15,27 @@ import {Ng2SearchPipe, Ng2SearchPipeModule} from "ng2-search-filter";
 import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponentComponent,
-    AboutComponentComponent,
-    AlbumsComponentComponent,
-    AlbumDetailComponentComponent,
-    AlbumPhotosComponentComponent,
-    HeaderComponent,
-    SearchFilterPipe
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    Ng2SearchPipeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponentComponent,
+        AboutComponentComponent,
+        AlbumsComponentComponent,
+        AlbumDetailComponentComponent,
+        AlbumPhotosComponentComponent,
+        HeaderComponent,
+        SearchFilterPipe
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        Ng2SearchPipeModule
+    ],
+    providers: [],
+    exports: [
+        HomeComponentComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
