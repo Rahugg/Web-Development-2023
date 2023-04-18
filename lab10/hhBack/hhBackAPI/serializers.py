@@ -25,6 +25,7 @@ class CompanySerializer(serializers.ModelSerializer):
 
 class VacancySerializer(serializers.Serializer):
     id = serializers.CharField(max_length=20)
+    name = serializers.CharField()
     description = serializers.CharField()
     salary = serializers.FloatField(default=0)
     company = CompanySerializer()
@@ -42,6 +43,7 @@ class VacancySerializer(serializers.Serializer):
         company_serializer = CompanySerializer(instance.company, data=company_data)
         company_serializer.is_valid(raise_exception=True)
         company = company_serializer.save()
+        instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
         instance.salary = validated_data.get('salary', instance.salary)
         instance.company = validated_data.get('company', instance.company)
