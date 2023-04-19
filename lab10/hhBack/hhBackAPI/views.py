@@ -28,7 +28,7 @@ class AllCompanies(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors)
 
 
 # def all_companies(request):
@@ -118,7 +118,7 @@ def vacancy(request, vacancy_id):
 #     return JsonResponse(v.to_json())
 
 
-# @api_view([ 'GET'])
+@api_view([ 'GET'])
 def vacancies_by_company(request, company_id):
     if request.method == "GET":
         try:
@@ -134,7 +134,7 @@ def vacancies_by_company(request, company_id):
 #     vacancies_json = [v.to_json() for v in Vacancy.objects.all() if v.company and v.company.id == company_id]
 #     return JsonResponse(vacancies_json, safe=False)
 
-# @api_view([ 'GET'])
+@api_view([ 'GET'])
 def top_ten_vacancies(request):
     if request.method == "GET":
         vacancies = Vacancy.objects.all().order_by('-salary')[:10]

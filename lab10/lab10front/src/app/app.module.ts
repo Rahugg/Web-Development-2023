@@ -11,6 +11,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { CreatecompanyComponent } from './components/createcompany/createcompany.component';
 import { CreatevacancyComponent } from './components/createvacancy/createvacancy.component';
 import {FormsModule} from "@angular/forms";
+import { UpdatecompanyComponent } from './components/updatecompany/updatecompany.component';
+import { UpdatevacancyComponent } from './components/updatevacancy/updatevacancy.component';
+import { VacanciesbycompanyComponent } from './components/vacanciesbycompany/vacanciesbycompany.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import {FormsModule} from "@angular/forms";
     NavbarComponent,
     CreatecompanyComponent,
     CreatevacancyComponent,
+    UpdatecompanyComponent,
+    UpdatevacancyComponent,
+    VacanciesbycompanyComponent,
 
   ],
     imports: [

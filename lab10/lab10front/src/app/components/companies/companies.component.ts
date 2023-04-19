@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Company} from "../../models/models";
 import {CompaniesService} from "../../services/companies.service";
+import {DataserviceService} from "../../services/dataservice.service";
 
 @Component({
   selector: 'app-companies',
@@ -11,7 +12,7 @@ export class CompaniesComponent implements OnInit {
 
   Companies: Company[] = []
 
-  constructor(private companyService: CompaniesService) {
+  constructor(private companyService: CompaniesService, private dataService: DataserviceService) {
   }
 
   ngOnInit(): void {
@@ -31,6 +32,11 @@ export class CompaniesComponent implements OnInit {
 
   reloadPage() {
     window.location.reload()
+  }
+
+  public sendData(id: number): void {
+    const dataToSend = id;
+    this.dataService.setData(dataToSend);
   }
 
 }
