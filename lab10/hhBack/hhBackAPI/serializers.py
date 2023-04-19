@@ -24,11 +24,11 @@ class CompanySerializer(serializers.ModelSerializer):
 #         fields = ['id', 'name', 'description', 'salary', 'company']
 
 class VacancySerializer(serializers.Serializer):
-    id = serializers.CharField(max_length=20)
+    id = serializers.IntegerField(required=False)
     name = serializers.CharField()
     description = serializers.CharField()
     salary = serializers.FloatField(default=0)
-    company = CompanySerializer()
+    company = CompanySerializer(required=False)
 
     def create(self, validated_data):
         company_data = validated_data.pop('company')

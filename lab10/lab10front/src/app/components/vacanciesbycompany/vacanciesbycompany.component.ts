@@ -1,26 +1,35 @@
 import {Component, OnInit} from '@angular/core';
 import {Vacancy} from "../../models/models";
-import {DataserviceService} from "../../services/dataservice.service";
 import {VacanciesService} from "../../services/vacancies.service";
+import {DataserviceService} from "../../services/dataservice.service";
 
 @Component({
-  selector: 'app-vacancies',
-  templateUrl: './vacancies.component.html',
-  styleUrls: ['./vacancies.component.css']
+  selector: 'app-vacanciesbycompany',
+  templateUrl: './vacanciesbycompany.component.html',
+  styleUrls: ['./vacanciesbycompany.component.css']
 })
-export class VacanciesComponent implements OnInit {
+export class VacanciesbycompanyComponent implements OnInit {
 
   Vacancies: Vacancy[] = []
+
 
   constructor(private vacanciesService: VacanciesService, private dataService: DataserviceService) {
   }
 
+  id: any;
+
+  public getData(): any {
+    this.id = this.dataService.getData();
+  }
+
   ngOnInit(): void {
-    this.vacanciesService.getVacancies().subscribe((data) => {
+    this.getData()
+    this.vacanciesService.getVacanciesByCompany(this.id).subscribe((data) => {
       console.log(data);
       this.Vacancies = data;
     })
   }
+
 
   deleteVacancy(itemId: number) {
     return this.vacanciesService.deleteVacancy(itemId).subscribe(
@@ -30,13 +39,6 @@ export class VacanciesComponent implements OnInit {
       });
   }
 
-  getTopTen() {
-    return this.vacanciesService.getTopTenVacancies().subscribe((data) => {
-      this.Vacancies = data;
-    })
-  }
-
-
   reloadPage() {
     window.location.reload()
   }
@@ -45,6 +47,4 @@ export class VacanciesComponent implements OnInit {
     const dataToSend = id;
     this.dataService.setData(dataToSend);
   }
-
-
 }
