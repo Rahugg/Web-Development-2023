@@ -1,43 +1,34 @@
-import {Component, OnInit} from '@angular/core';
-import {CompaniesService} from "../../services/companies.service";
+import {Component} from '@angular/core';
 import {VacanciesService} from "../../services/vacancies.service";
-import {Company} from "../../models/models";
+import {Vacancy} from "../../models/models";
 
 @Component({
   selector: 'app-createvacancy',
   templateUrl: './createvacancy.component.html',
   styleUrls: ['./createvacancy.component.css']
 })
-export class CreatevacancyComponent implements OnInit {
-  // company={
-  //   name
-  //
-  // }
-
-  vacancy = {
+export class CreatevacancyComponent {
+  newVacancy: { name: string; description: string; company: { address: string; city: string; name: string; description: string; id: number }; salary: number } = {
     name: '',
     description: '',
     salary: 0,
-    company: null,
+    company: {
+      id: 0,
+      name: '',
+      description: '',
+      city: '',
+      address: ''
+    }
   };
 
-  Companies: Company[] = []
-
-  constructor(private vacancyService: VacanciesService, private companyService: CompaniesService) {
+  constructor(private vacancyService: VacanciesService) {
   }
 
-  createVacancy() {
-
-    this.vacancyService.createVacancy(this.vacancy).subscribe((response: any) => {
-      console.log(this.vacancy)
-      console.log(response);
-    })
+  onSubmit() {
+    console.log(this.newVacancy)
+    this.vacancyService.createVacancy(this.newVacancy).subscribe((response) => {
+      console.log(response)
+    });
   }
 
-  ngOnInit(): void {
-    this.companyService.getCompanies().subscribe((data) => {
-      console.log(data);
-      this.Companies = data;
-    })
-  }
 }

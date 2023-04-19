@@ -14,8 +14,8 @@ export class VacanciesService {
 
   /* CRUD ON VACANCIES */
 
-  createVacancy(vacancy: { name: string; description: string; company: null; salary: number }): Observable<Vacancy[]> {
-    return this.VacancyService.post<Vacancy[]>(`${this.BASE_URL}api/vacancies/`, vacancy)
+  createVacancy(vacancy: { name: string; description: string; company: { address: string; city: string; name: string; description: string; id: number }; salary: number }): Observable<Vacancy> {
+    return this.VacancyService.post<Vacancy>(`${this.BASE_URL}api/vacancies/`, vacancy)
   }
 
   getVacancies(): Observable<Vacancy[]> {

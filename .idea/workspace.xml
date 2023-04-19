@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3ac414d6-8cd7-4ac9-95ac-08874d835a96" name="Changes" comment="&quot;lAB10 FRONT. Completed Crud in company&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/hhBack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/hhBack/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/vacancies/vacancies.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/vacancies/vacancies.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/models/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/services/vacancies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/services/vacancies.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +78,7 @@
       <workItem from="1681862487936" duration="7605000" />
       <workItem from="1681872035417" duration="5000" />
       <workItem from="1681899931100" duration="860000" />
+      <workItem from="1681901749533" duration="2455000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Created models - lab9&quot;">
       <created>1681115311410</created>
@@ -107,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681827602659</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;lAB10 FRONT. Completed Crud in company&quot;">
+      <created>1681901841144</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681901841144</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +134,7 @@
     <MESSAGE value="&quot; upd done&quot;" />
     <MESSAGE value="&quot;ADDED CRUD&quot;" />
     <MESSAGE value="&quot;fixed serializers&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fixed serializers&quot;" />
+    <MESSAGE value="&quot;lAB10 FRONT. Completed Crud in company&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;lAB10 FRONT. Completed Crud in company&quot;" />
   </component>
 </project>

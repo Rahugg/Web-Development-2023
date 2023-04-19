@@ -1,36 +1,39 @@
-<form (ngSubmit)="createVacancy()" class=" py-4 px-6 border rounded flex items-center flex-col mb-2 ">
-  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black" for="Name">
-    <span>Name </span>
-    <input [(ngModel)]="vacancy.name"
-           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-           id="name" name="Title" placeholder="Samsung"
-           type="text"
-    />
+<form (ngSubmit)="onSubmit()" #vacancyForm="ngForm">
+  <label>
+    Vacancy Name:
+    <input type="text" name="name" [(ngModel)]="newVacancy.name" required>
   </label>
-
-  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black" for="Salary">
-    <span>Salary </span>
-    <input [(ngModel)]="vacancy.salary"
-           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-           id="salary" name="Description"
-           placeholder="Almaty"
-           type="number"/>
+  <br>
+  <label>
+    Description:
+    <textarea name="description" [(ngModel)]="newVacancy.description" required></textarea>
   </label>
-
-  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black" for="Description">
-    <span>Description </span>
-    <input [(ngModel)]="vacancy.description"
-           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-           id="description" name="Cost" placeholder="birdene-shirdene"
-           type="text"/>
+  <br>
+  <label>
+    Salary:
+    <input type="number" name="salary" [(ngModel)]="newVacancy.salary" required>
   </label>
-  <div>
-    <label>Company:</label>
-    <input [(ngModel)]="vacancy.company" name="company" required type="text">
-  </div>
-
-  <input
-    class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-    type="submit" value='SUBMIT'
-  />
+  <br>
+  <br>
+  <label>
+    Company Name:
+    <input type="text" name="companyName" [(ngModel)]="newVacancy.company.name" required>
+  </label>
+  <br>
+  <label>
+    Company Description:
+    <textarea name="companyDescription" [(ngModel)]="newVacancy.company.description"></textarea>
+  </label>
+  <br>
+  <label>
+    Company City:
+    <input type="text" name="companyCity" [(ngModel)]="newVacancy.company.city" required>
+  </label>
+  <br>
+  <label>
+    Company Address:
+    <textarea name="companyAddress" [(ngModel)]="newVacancy.company.address"></textarea>
+  </label>
+  <br>
+  <button type="submit" [disabled]="vacancyForm.invalid">Create Vacancy</button>
 </form>

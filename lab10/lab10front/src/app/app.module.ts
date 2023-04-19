@@ -8,12 +8,12 @@ import {HomeComponent} from './components/home/home.component';
 import {VacanciesComponent} from './components/vacancies/vacancies.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
-import { CreatecompanyComponent } from './components/createcompany/createcompany.component';
-import { CreatevacancyComponent } from './components/createvacancy/createvacancy.component';
-import {FormsModule} from "@angular/forms";
-import { UpdatecompanyComponent } from './components/updatecompany/updatecompany.component';
-import { UpdatevacancyComponent } from './components/updatevacancy/updatevacancy.component';
-import { VacanciesbycompanyComponent } from './components/vacanciesbycompany/vacanciesbycompany.component';
+import {CreatecompanyComponent} from './components/createcompany/createcompany.component';
+import {CreatevacancyComponent} from './components/createvacancy/createvacancy.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {UpdatecompanyComponent} from './components/updatecompany/updatecompany.component';
+import {UpdatevacancyComponent} from './components/updatevacancy/updatevacancy.component';
+import {VacanciesbycompanyComponent} from './components/vacanciesbycompany/vacanciesbycompany.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +29,13 @@ import { VacanciesbycompanyComponent } from './components/vacanciesbycompany/vac
     VacanciesbycompanyComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
