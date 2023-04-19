@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3ac414d6-8cd7-4ac9-95ac-08874d835a96" name="Changes" comment="&quot;lAB10 FRONT. Completed Crud in company&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/hhBack/hhBackAPI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/hhBack/hhBackAPI/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/companies/companies.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/companies/companies.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/createvacancy/createvacancy.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab10/lab10front/src/app/components/vacancies/vacancies.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/lab10/lab10front/src/app/components/vacancies/vacancies.component.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +70,7 @@
       <workItem from="1681820711711" duration="1443000" />
       <workItem from="1681862487936" duration="7605000" />
       <workItem from="1681872035417" duration="5000" />
+      <workItem from="1681899931100" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Created models - lab9&quot;">
       <created>1681115311410</created>

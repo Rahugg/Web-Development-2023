@@ -1,9 +1,9 @@
 export interface Company {
-  id: number,
-  name: string,
-  description: string,
-  city: string,
-  address: string
+  id: number;
+  name: string;
+  description: string | null;
+  city: string;
+  address: string | null;
 }
 
 export interface Vacancy {
@@ -11,11 +11,5 @@ export interface Vacancy {
   name: string;
   description: string;
   salary: number;
-  company: {
-    id: number;
-    name: string;
-    description: string;
-    city: string;
-    address: string;
-  };
+  company: Company | null;
 }
